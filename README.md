@@ -14,3 +14,11 @@ npm start
 ```
 
 launch browser at localhost:8080
+
+build for production
+```
+npm run build
+```
+
+TODO:  
+build minified code w no source maps
