@@ -63,7 +63,7 @@ var GlView = function() {
   function initVideo(){
 
     video = document.createElement("video");
-    video.src = "img/buildings.m4v";
+    video.src = "img/buildings.mp4";
     video.loop = true;
     video.muted = true;
     video.play();
