@@ -1,0 +1,16 @@
+{
+  "name": "simple-template",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --inline --hot"
+  },
+  "dependencies": {
+    "glslify-loader": "^1.0.2",
+    "raw-loader": "^0.5.1",
+    "three": "^0.76.1"
+  },
+  "devDependencies": {
+    "webpack": "^1.12.9"
+  }
+}
