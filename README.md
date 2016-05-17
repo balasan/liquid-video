@@ -3,14 +3,22 @@
 run app locally:  
 install node and npm  
 
-install dependencies  
+install dependencies:  
 ```
 npm install
 ```
 
-run app
+run app:
 ```
 npm start
 ```
 
-launch browser at localhost:8080
+launch browser at http://localhost:8080
+
+build for production:
+```
+npm run build
+```
+
+TODO:  
+build minified code w no source maps
