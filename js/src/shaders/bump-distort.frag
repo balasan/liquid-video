@@ -65,7 +65,8 @@ void main() {
   vec3 offsetNormal = N - dot(N, vec3(0.0, 0.0, 1.0)) * vec3(0.0, 0.0, 1.0);
   vec2 rOffset = normalize(offsetNormal.xy) * length(offsetNormal) * .3;
   diffuseColor = texture2D(texture2, vUv + rOffset) ;
-  input0 = texture2D(texture2, vUv + rOffset)*0.7 + 0.3*texture2D(texture, vUv);
+  input0 = texture2D(texture2, vUv + rOffset)*0.7 + 0.4*texture2D(texture, vUv);
+  // input0 = texture2D(texture2, vUv + rOffset) * texture2D(texture, vUv);
 
   vec4 lightColor = input0;
   vec4 ambientColor = vec4(vec3(input0.rgb*lightBrightness),0.5);
