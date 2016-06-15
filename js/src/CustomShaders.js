@@ -128,6 +128,18 @@ var CustomShaders = function(){
     fragmentShader : require('./shaders/bump-distort.frag')
 	};
 
+  this.bumpBumpShader =  {
+    uniforms: THREE.UniformsUtils.merge( [
+      defualtUniforms,
+      {
+        "texture2"  : { type: "t", value: null },
+        "lightWidth"  : { type: "f", value: 9.5 },
+        "lightBrightness"  : { type: "f", value: 1.0 }
+      }
+    ]),
+    vertexShader : require('./shaders/default.vert'),
+    fragmentShader : require('./shaders/bump-bump.frag')
+  };
 
 	this.drawingBlurShader = {
 		uniforms: THREE.UniformsUtils.merge( [

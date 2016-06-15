@@ -46,7 +46,7 @@ function BumpMaterial(options){
         // this.fbos[4].material.uniforms.intensity.value = 1.0;
 
         // this.fbo4 = new FeedbackObject(customShaders.bumpShader2);
-        this.fbo4 = new FeedbackObject(customShaders.bumpDistortShader);
+        this.fbo4 = new FeedbackObject(customShaders.bumpBumpShader);
         this.fbo4.material.uniforms.texture.value = this.fbos[4].renderTarget;
         // this.fbo4.material.uniforms.texture2.value = this.fbos[4].renderTarget;
         this.fbo4.material.uniforms.texture2.value = this.video;
@@ -115,11 +115,12 @@ function BumpMaterial(options){
 
           this.fbos[i].material.uniforms.mouse.value = new THREE.Vector2(window.mouseX, window.mouseY);
 
-          this.material.uniforms.mouse.value = new THREE.Vector2(window.innerWidth, 0);
         }
-        this.fbos[5].material.uniforms.mouse.value = new THREE.Vector2(
-            window.innerWidth * ( 0+.5 ), window.innerWidth * (.5 + .5)
-        );
+        this.material.uniforms.mouse.value = new THREE.Vector2(window.innerWidth, 0);
+
+        // this.fbos[5].material.uniforms.mouse.value = new THREE.Vector2(
+        //     window.innerWidth * ( 0+.5 ), window.innerWidth * (.5 + .5)
+        // );
 
         // this.texture.needsUpdate = true;
         this.update();
